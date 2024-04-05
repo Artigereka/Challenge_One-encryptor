@@ -17,23 +17,28 @@
         </header>
         <main>
             <section class="input">
-                <textarea name="input-text" id="" autocomplete="off" placeholder="Enter text here"></textarea>
+                <textarea name="input-text" id="input-text" autocomplete="off" placeholder="Enter text here"></textarea>
                 <div>
                     <p>Only lowercase letters</p>
                     <div class="buttons">
-                        <button>Encrypt</button>
-                        <button>Unencrypt</button>
+                        <button id = "encrypt" onclick = "encrypt()">Encrypt</button>
+                        <button id = "desencrypt" onclick = "desencrypt()">Desencrypt</button>
                     <div>
                 </div>
             </section>
 
             <section class="output">
-                <div class="not-found">
+                <div id="not-found">
                     <img class="doll" src="images/doll.png" alt="doll with magnifying glass">
                     <div class="text-box">
                         <p>Message not-found</p>
                         <p>Enter the text you want to encrypt or encrypt</p>
                     </div>
+                </div>
+                <div class="result" id="result">
+                    <p class="output-text" id="output-text"></p>
+                    <button id="copy" onclick="copy()">Copy</button>
+                    <!-- <button id="paste" onclick="paste()">Paste</button> -->
                 </div>
 
                 <div class="result">
@@ -44,5 +49,6 @@
         <footer>
             <p>Designed by Artzai Orozco <br class="line-break"> to Alura ONE</p>
         </footer>
+        <script src="functions.js"></script>
     </body>
 </html>

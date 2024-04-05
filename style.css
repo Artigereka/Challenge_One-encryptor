@@ -54,6 +54,7 @@ textarea{
     width: 100%;
     padding: 0;
     border: 0;
+    outline: none;
     border-color: none;
     font-family: Inter;
     font-weight: 400;
@@ -109,7 +110,7 @@ textarea{
 }
 
 /* not-found */
-.not-found{
+#not-found{
     width: 100%;
     /* display: none; */
 }
@@ -154,6 +155,10 @@ textarea{
     margin-top: 32px;
     width: 100%;
 }
+
+/*.result button:last-child{
+    display: none;
+}*/
 
 /* Footer */
 footer{
