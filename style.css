@@ -117,8 +117,8 @@ main{
 /* Output */
 .output{
     max-width: 400px;
+    max-height: calc(96vh - 80px);
     width: 40%;
-    height: calc(100% - (80px));
     margin: 40px;
     padding: 32px;
     border-radius: 32px;
