@@ -1,5 +1,6 @@
-let input = document.getElementById("input-text");
-let output = document.getElementById("output-text");
+const input = document.getElementById("input-text");
+const output = document.getElementById("output-text");
+const button = document.querySelectorAll("button");
 
 function onlyContainsLowercase(str){
     return /^[a-z0-9/ /:;,.¿?¡!]+$/.test(str);
@@ -47,7 +48,7 @@ function desencrypt(){
 }
 
 function copy(){
-    let copyText = document.getElementById("output-text").innerText;
+    let copyText = output.innerText;
     navigator.clipboard.writeText(copyText);
     document.getElementById("paste").style.display = "block";
 }
@@ -56,3 +57,10 @@ function paste(){
     navigator.clipboard.readText()
     .then((clipText) => (input.value = clipText));
 }
+
+button.forEach(element => element.addEventListener("click", (event) =>{
+    element.classList.add("pulse");
+    setTimeout(function() {
+        element.classList.remove("pulse");
+    }, 800);
+}));
