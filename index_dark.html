@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style_dark.css">
         <title>Text Encryptor</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
     </head>
     <body>
         <header>
-            <a href="index_dark.html"><img src="images/logo.png" alt="Alura logo"></a>
+            <a href="index.html"><img src="images/logo.png" alt="Alura logo"></a>
         </header>
         <main>
             <section class="input">
@@ -22,12 +22,11 @@
                 <div>
                     <p>Only lowercase letters</p>
                     <div class="input__buttons">
-                        <button class="input__buttons__button" id = "encrypt" onclick = "encrypt()">Encrypt</button>
-                        <button class="input__buttons__button button--main" id = "desencrypt" onclick = "desencrypt()">Desencrypt</button>
-                    <div>
+                        <button class="input__buttons__button" onclick="encryptDark()">Encrypt</button>
+                        <button class="input__buttons__button button--main" onclick="desencryptDark()">Desencrypt</button>
+                    </div>
                 </div>
             </section>
-
             <section class="output">
                 <div class="output__not-found" id="not-found">
                     <img class="output__not-found__doll" src="images/doll.png" alt="doll with magnifying glass">
@@ -43,10 +42,6 @@
                         <button class="output__result__buttons__button button--accent-2" id="paste" onclick="paste()">Paste</button>
                     </div>
                 </div>
-
-                <div class="result">
-                    <button>Copiar</button>
-                </div>
             </section>
         </main>
         <footer>
@@ -56,4 +51,3 @@
         </footer>
         <script src="functions.js"></script>
     </body>
-</html>

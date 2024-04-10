@@ -25,7 +25,25 @@ function encrypt(){
     }
     document.getElementById("paste").style.display = "none";
 }
-    
+   
+function encryptDark(){
+    const chars = {
+        "d": "11",
+        "a": "13",
+        "r": "14",
+        "k": "22"
+    }
+
+    if(onlyContainsLowercase(input.value)){
+        let encriptedText = input.value.replace(/[dark]/g, c => chars[c]);
+        document.getElementById("not-found").style.display = "none";
+        document.getElementById("result").style.display = "block";
+        output.textContent = encriptedText;
+    } else{
+        alert("Remember, only lowercase.");
+    }
+    document.getElementById("paste").style.display = "none";
+}
 
 function desencrypt(){
     const chars = {
@@ -38,6 +56,24 @@ function desencrypt(){
 
     if(onlyContainsLowercase(input.value)){
         let desencriptedText = input.value.replace(/ai|enter|imes|ober|ufat/g, c => chars[c]);
+        document.getElementById("not-found").style.display = "none";
+        document.getElementById("result").style.display = "block";
+        output.textContent = desencriptedText;
+    } else{
+        alert("Remember, only lowercase.");
+    }
+    document.getElementById("paste").style.display = "none";
+}
+
+function desencryptDark(){
+    const chars = {
+        "11": "d",
+        "13": "a",
+        "14": "r",
+        "22": "k"
+    }
+    if(onlyContainsLowercase(input.value)){
+        let desencriptedText = input.value.replace(/[11|13|14|22]/g, c => chars[c]);
         document.getElementById("not-found").style.display = "none";
         document.getElementById("result").style.display = "block";
         output.textContent = desencriptedText;

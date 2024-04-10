@@ -1,10 +1,10 @@
 :root{
-    --color-main: #F3F5FC;
-    --color-accent-1: #0A3871;
-    --color-accent-2: #FFFFFF;
-    --color-accent-3: #495057;
-    --color-hover-1: #052051;
-    --color-hover-2: #CED4DA;
+    --color-main: #343A40;
+    --color-accent-1: #609ED4;
+    --color-accent-2: #495057;
+    --color-accent-3: #CED4DA;
+    --color-hover-1: #356EA9;
+    --color-hover-2: #0A3871;
 }
 
 *{
@@ -71,7 +71,7 @@ main{
     font-size: 12px;
     line-height: 150%;
     color: var(--color-accent-3);
-    opacity: 0 8;
+    opacity: 0.8;
     margin: 16px 0;
 }
 
@@ -92,7 +92,7 @@ main{
     font-size: 16px;
     line-height: 19px;
     transition-duration: 0.4s;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 24px 32px -8px rgb(0, 0, 0, 0.08);
 }
 
 .input__buttons__button{
@@ -155,7 +155,7 @@ main{
     margin: 16px 0px;
 }
 
-/* Output result */
+/* Output resuult */
 .output__result{
     height: 100%;
     width: 100%;
@@ -219,8 +219,7 @@ footer a{
 
 /* Animations */
 .pulse{
-    animation: pulse 1s fowards ease-out;
-    /* box-shadow: 0px 15px 28px -11px rgba(255, 79, 93, 0.9); */
+    animation: pulse 1s forwards ease-out;
 }
 @-webkit-keyframes pulse{
     0%{
@@ -249,7 +248,7 @@ footer a{
 }
 
 /* Media queries */
-/* Tablet size*/
+/* Tablet size */
 @media screen and (max-width: 768px){
     header{
         top: 40px;
